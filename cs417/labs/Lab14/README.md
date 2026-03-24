@@ -37,19 +37,19 @@ A **tree** is a data structure where each node can have children. A **binary tre
 
 A **Binary Search Tree** adds one rule: for every node, everything in its left subtree is smaller, and everything in its right subtree is larger. That single rule is what makes searching fast — at each node, you know which direction to go.
 
-Here's a BST built by inserting the values `8, 3, 10, 1, 6, 14, 4, 7, 13` in that order:
+Here's a BST built by inserting the values `15, 9, 21, 4, 12, 18, 25, 2, 7` in that order:
 
 ```
-        8
-       / \
-      3   10
-     / \    \
-    1   6    14
-       / \   /
-      4   7 13
+         15
+        /  \
+       9    21
+      / \   / \
+     4  12 18  25
+    / \
+   2   7
 ```
 
-Notice: every value to the left of 8 is smaller. Every value to the right is larger. And that rule holds at *every* node, not just the root.
+Notice: every value to the left of 15 is smaller. Every value to the right is larger. And that rule holds at *every* node, not just the root.
 
 You won't build this tree yourself. The `bst.py` module handles insertion, searching, and display. You'll import it and focus on the interesting question: **how do you visit every node, and why does the visit order matter?**
 
@@ -64,7 +64,7 @@ Get comfortable with the provided BST module. In `traversals.py`, there's a `bui
 **Your task:** Fill in `explore()` to do the following:
 - Build the sample tree using `build_sample_tree()`
 - Print the tree using its `display()` method
-- Search for the values `6`, `9`, and `14` — for each, print whether it was found
+- Search for the values `12`, `20`, and `25` — for each, print whether it was found
 - Print the total number of nodes in the tree (use the `size()` method)
 
 Run it:
@@ -72,7 +72,7 @@ Run it:
 python src/traversals.py
 ```
 
-You should see the tree structure printed, search results for all three values, and the node count. Look at the shape. Notice where values ended up. Why is `3` to the left of `8`? Why is `13` to the left of `14` but to the right of `10`?
+You should see the tree structure printed, search results for all three values, and the node count. Look at the shape. Notice where values ended up. Why is `9` to the left of `15`? Why is `7` to the right of `4` but to the left of `9`?
 
 ```bash
 pytest -v -k "TestExplore"
