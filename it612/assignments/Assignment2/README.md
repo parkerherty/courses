@@ -4,10 +4,32 @@
 
 Four short bash scripting exercises covering quoting, variables, streams, and pipelines. Each exercise is a separate `.sh` file that you'll complete.
 
+## Setup (One Time)
+
+You'll be working with a shared course repository. First, you need to create your own copy:
+
+1. **Fork the repo**: Go to [github.com/blkfin/courses](https://github.com/blkfin/courses) and click the **Fork** button (top right). This creates a copy under your own GitHub account.
+
+2. **Open in Codespaces**: From *your fork* (it should say `yourusername/courses` at the top), click the green **Code** button → **Codespaces** tab → **Create codespace on main**.
+
+3. **Verify**: In the Codespace terminal, run:
+   ```bash
+   ls it612/assignments/Assignment2/
+   ```
+   You should see the starter files: `soda.sh`, `greetings.sh`, `mixed.sh`, `pipeline.sh`, `run_tests.sh`.
+
+> **Already forked from a previous assignment?** Just pull the latest updates into your fork:
+> ```bash
+> git remote add upstream https://github.com/blkfin/courses.git   # only needed once
+> git fetch upstream
+> git merge upstream/main
+> ```
+> This brings in the new assignment files without overwriting your existing work.
+
 ## Getting Started
 
-1. Open your GitHub Codespace
-2. Navigate to `assignments/Assignment2/`
+1. Open your Codespace (from your fork)
+2. Navigate to `it612/assignments/Assignment2/`
 3. You'll find four starter scripts — each one has instructions in the comments
 
 ## The Exercises
