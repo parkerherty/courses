@@ -16,14 +16,14 @@ echo ""
 # ─────────────────────────────────────────────
 echo "--- Line Counts ---"
 
-# TODO: Count total lines in the log file
-# echo "Total lines: $( ... )"
+TOTAL_LINES=$(wc -l < "$LOG")
+echo "Total lines: $TOTAL_LINES"
 
-# TODO: Count lines containing ERROR
-# echo "Error lines: $( ... )"
+ERROR_COUNT=$(grep "ERROR" "$LOG" | wc -l)
+echo "Error lines: $ERROR_COUNT"
 
-# TODO: Count lines containing WARN
-# echo "Warning lines: $( ... )"
+WARN_COUNT=$(grep "WARN" "$LOG" | wc -l)
+echo "Warning lines: $WARN_COUNT"
 
 echo ""
 
@@ -34,8 +34,7 @@ echo ""
 # ─────────────────────────────────────────────
 echo "--- Unique Error Messages ---"
 
-# TODO: grep ERROR lines, extract the message part, sort, remove duplicates
-# grep ... | awk ... | sort | uniq
+grep "ERROR" "$LOG" | awk '{for(i=4;i<=NF;i++) printf "%s ", $i; print ""}' | sort | uniq
 
 echo ""
 
@@ -46,19 +45,16 @@ echo ""
 # ─────────────────────────────────────────────
 echo "--- Top Endpoints ---"
 
-# TODO: grep for GET or POST, extract method and path, count and rank
-# grep ... | awk ... | sort | uniq -c | sort -rn
+grep -E "GET|POST" "$LOG" | awk '{print $5, $6}' | sort | uniq -c | sort -rn
 
 echo ""
-
 # ─────────────────────────────────────────────
 # Step 4: Who Logged In?
 # Find login sessions and count per user.
 # ─────────────────────────────────────────────
 echo "--- User Logins ---"
 
-# TODO: grep for session lines, extract usernames, count and rank
-# grep ... | grep -o ... | sort | uniq -c | sort -rn
+grep "session created for user=" "$LOG" | grep -o 'user=[a-z]*' | sort | uniq -c | sort -rn
 
 echo ""
 
@@ -67,5 +63,4 @@ echo ""
 # Add a timestamp line so you know when this ran.
 # ─────────────────────────────────────────────
 
-# TODO: Print a line showing when this report was generated
-# echo "Report generated: $( ... )"
+echo "Report generated: $(date)"
