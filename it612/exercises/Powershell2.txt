@@ -1,0 +1,178 @@
+
+Name       : bash
+Id         : 1471
+CPU        : 0.15
+WorkingSet : 12976128
+
+Name       : containerd
+Id         : 71
+CPU        : 0.26
+WorkingSet : 50589696
+
+Name       : cpuUsage.sh
+Id         : 12122
+CPU        : 0
+WorkingSet : 3538944
+
+Name       : docker-init
+Id         : 1
+CPU        : 0.07
+WorkingSet : 655360
+
+Name       : dockerd
+Id         : 58
+CPU        : 0.31
+WorkingSet : 76120064
+
+Name       : node
+Id         : 571
+CPU        : 4.45
+WorkingSet : 139247616
+
+Name       : node
+Id         : 594
+CPU        : 23.41
+WorkingSet : 383229952
+
+Name       : node
+Id         : 608
+CPU        : 0.26
+WorkingSet : 60313600
+
+Name       : node
+Id         : 1019
+CPU        : 2.69
+WorkingSet : 78901248
+
+Name       : node
+Id         : 1059
+CPU        : 0.23
+WorkingSet : 62795776
+
+Name       : pwsh
+Id         : 5178
+CPU        : 8.374714
+WorkingSet : 171839488
+
+Name       : sh
+Id         : 7
+CPU        : 0.27
+WorkingSet : 1441792
+
+Name       : sh
+Id         : 386
+CPU        : 0
+WorkingSet : 1703936
+
+Name       : sh
+Id         : 415
+CPU        : 0
+WorkingSet : 1835008
+
+Name       : sh
+Id         : 562
+CPU        : 0
+WorkingSet : 1703936
+
+Name       : sh
+Id         : 1855
+CPU        : 0
+WorkingSet : 1835008
+
+Name       : sh
+Id         : 1885
+CPU        : 0
+WorkingSet : 1835008
+
+Name       : sh
+Id         : 12121
+CPU        : 0
+WorkingSet : 1835008
+
+Name       : sleep
+Id         : 12111
+CPU        : 0
+WorkingSet : 1835008
+
+Name       : sleep
+Id         : 12126
+CPU        : 0
+WorkingSet : 1966080
+
+Name       : sshd [listener] 0 of 10-100 startups
+Id         : 35
+CPU        : 0
+WorkingSet : 2904064
+
+
+Name         Id   CPU
+----         --   ---
+node        594 23.76
+pwsh       5178  8.63
+node        571  4.53
+node       1019  2.80
+dockerd      58  0.31
+sh            7  0.28
+containerd   71  0.27
+node        608  0.26
+node       1059  0.23
+bash       1471  0.15
+
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      0     0.00      72.59       0.31      58   1 dockerd
+      0     0.00     133.05       4.60     571 562 node
+      0     0.00     365.48      24.14     594 562 node
+      0     0.00      57.52       0.26     608 562 node
+      0     0.00      75.25       2.88    1019 562 node
+      0     0.00      59.89       0.23    1059 562 node
+      0     0.00     164.75       8.75    5178 …71 pwsh
+
+
+Name      Id  MemMB
+----      --  -----
+node     594 365.50
+pwsh    5178 164.90
+node     571 133.20
+node    1019  75.40
+dockerd   58  72.60
+node    1059  59.90
+node     608  57.50
+
+
+Count             : 22
+Average           : 
+Sum               : 
+Maximum           : 
+Minimum           : 
+StandardDeviation : 
+Property          : 
+
+
+Count             : 18
+Average           : 58540487.1111111
+Sum               : 1053728768
+Maximum           : 383229952
+Minimum           : 
+StandardDeviation : 
+Property          : WorkingSet
+
+
+Count             : 83
+Average           : 
+Sum               : 
+Maximum           : 
+Minimum           : 
+StandardDeviation : 
+Property          : 
+
+
+Count Name
+----- ----
+    6 sh
+    5 node
+    1 bash
+    1 containerd
+    1 docker-init
+
